@@ -1,0 +1,270 @@
+/* Import the 'Montserrat' font with a weight of 500 from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Import the 'Poppins' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{            /*This css affects whole body of the page*/
+	margin:0px;
+	padding: 0px;
+    height: 0px;
+    overflow-x: hidden;
+	font-family:poppins;
+	
+}
+
+/*CSS for Navigation bar*/
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#main{
+	width:100%;
+	height:100vh;
+	position: relative;
+}
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 5px 10px 30px rgba(0,0,0,0.02);
+	left: 0;
+	padding-top: 10px;
+	width:100%;
+	z-index: 1;
+	background-color: #FFFFFF;
+}
+.logo{     /*CSS for logo*/
+	height: 46px;
+	margin-right:17%;
+}
+nav ul{
+	display: flex;
+}
+nav ul li a{
+	height:40px;
+    font-family: "montserrat",sans-serif;
+	line-height: 43px;
+	margin: 3px;
+	padding: 0px 22px;
+	display: flex;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	color:#585b5b;
+	letter-spacing: 1px;
+}
+
+nav ul li a:hover{         /*This css afftects navbar if anything triggers it*/
+	background-color: #005792;
+	color:#FFFFFF;
+	box-shadow: 5px 10px 30px rgba(64,198,196,0.3);
+	transition: all ease 0.2s;
+}
+.nav-search{
+	display: flex;
+	height: 90px;
+	width: 100%;
+	justify-content:space-around;
+	margin-left: 60px;
+	margin-bottom: -10px;
+}
+
+img{
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+h4{
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+
+/*CSS for Blog page*/
+.blog-data{ 
+	width: 70%;
+	text-align: center;
+	margin: auto;
+}
+.blog-img{
+	width: 40%;
+	margin-left:auto;
+}
+.blog-main-img{
+	width: 60%;
+	margin-left:auto;
+}
+
+.blog-title{
+	width: 90%;
+	margin: auto;
+}
+
+.blog-p{
+	text-align: left;
+}
+
+/*CSS for Research page*/
+table {
+    font-family: "Montserrat", sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    line-height: 2;
+    margin: 50px auto 50px auto;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+th {
+    background-color: #005792;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "montserrat" sans-serif;
+}
+
+
+.research-title{
+	width: 90%;
+	margin: 3rem auto;
+}
+.image-section{
+	display: flex;
+}
+.image-section img{
+	margin-inline: 1rem;
+}
+.nameo{
+	display: flex;
+}
+
+/*CSS for going back to the top section of research page*/
+.to-top {
+	padding: 2px;
+	background-color: #005792;
+	color: #FFFFFF;
+	margin-left: 50%;
+	transition: all .4s;
+	scroll-behavior: smooth;
+}
+.to-top:hover{
+	background-color: #1c3548;
+
+}
+.Com{
+	font-size: 36px;
+    text-align: center;
+    margin-top: 60px;
+    text-decoration: underline;
+}
+
+
+/*CSS for About us page*/
+.portfolio {
+    display: flex;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    justify-content: space-between;
+
+}
+.portfolio .port-1 {
+    flex-basis: 33%;
+    background-color: #005792;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 20px;
+	color: #FFFFFF;
+    
+	
+}
+ 
+.position{
+	padding-bottom: 20px;
+}
+.port-1 p {
+    margin: -2px;
+}
+.port-1 h4 {
+	font-weight: 500;
+	text-decoration:underline;
+}
+
+.portfolio .port-1 img {
+    border-radius: 10%;
+}
+
+.our-profile h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 60px;
+	text-decoration: underline;
+  
+}
+
+.our-profile{
+	margin-bottom: 50px;
+}
+
+.port-1:hover {
+	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.8);
+}
+
+/*CSS for button of profile of team members*/
+.button{
+    margin-top: 15px;
+	height: 12px;
+	width: 20px;
+    background-color:#1c3548;
+    color: #ffffff;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+	margin-right: 8px;
+        
+	}
+.button:hover {
+		background-color: #1b4565;
+    }
+
+
+/*CSS for footer of almost all pages*/
+.footer{
+	background-color: #34656d;
+    text-align: center;
+    padding:2% 3%;
+	margin-top: 5rem;
+	color: #FFFFFF;
+  }
+  
+  .footer-icon{
+	  margin:5px 10px;
+	  font-size: larger;
+	  color: #FFFFFF;
+	}
+
+  .footer-icon:hover{
+	  zoom: 20fr;
+	  color: aquamarine;
+  }
+

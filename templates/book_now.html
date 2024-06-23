@@ -1,0 +1,22 @@
+<!-- book_now.html -->
+
+<form method="POST" action="{% url 'book_now_submit' %}">
+    {% csrf_token %}
+    
+    <label for="event_name">Event Name</label>
+    <input type="text" id="event_name" name="event_name" placeholder="Enter event name">
+
+    <label for="user_name">Your Name</label>
+    <input type="text" id="user_name" name="user_name" placeholder="Enter your name">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" placeholder="Enter event description"></textarea>
+
+    <input type="submit" value="Book">
+</form>

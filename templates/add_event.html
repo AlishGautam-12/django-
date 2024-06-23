@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    <link rel="stylesheet" href="{% static 'css/Add_Event.css' %}">
+</head>
+<body>
+    <nav>
+        <header>
+           
+            <ul class="menu">
+                <li><a href="{% url 'Home' %}">Home</a></li>
+                <li> <a href="{% url 'Product' %}">Events</a></li>
+                <li><a href="{% url 'Event_list' %}">Event_list</a></li>
+                <!-- Other menu items if needed -->
+            </ul>
+        </header>
+    </nav>
+    <section id="product">
+        <hr style="border-color: #005792;">  <!--Inline CSS-->
+     </section>
+   
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %} 
+        <h3>Add Event</h3>
+
+        <label for="event_name">Event Name</label>
+        <input type="text" placeholder="Event Name" name="event_name" id="event_name">
+
+        <label for="description">Description</label>
+        <textarea placeholder="Description" name="description" id="description"></textarea>
+
+        <label for="date">Date</label>
+        <input type="date" placeholder="Date" name="date" id="date">
+
+        <label for="time">Time</label>
+        <input type="time" placeholder="Time" name="time" id="time">
+
+        <label for="venue">Venue</label>
+        <input type="text" placeholder="Venue" name="venue" id="venue">
+
+        <label for="price">Price</label>
+        <input type="text" placeholder="Price" name="price" id="price">
+
+        <label for="image">Event Image</label>
+        <input type="file" name="image" id="image">
+
+        <button type="submit">Add Event</button>
+    </form>
+</body>
+</html>

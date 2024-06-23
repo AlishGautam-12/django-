@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  
+
+  <!-- Link to the main CSS stylesheet whic his external CSS -->
+  
+  <link rel="stylesheet" href="{% static 'css/Product.css' %}">
+
+   
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <!--Including the awesome font library-->
+  <script src="https://kit.fontawesome.com/bc715aa43c.js" crossorigin="anonymous"></script>
+
+  <!--Title of the page-->
+  <title>Products</title>
+  
+     
+  <style>
+       /*Internal CSS for demonstration purposes*/
+        .heading{
+	        text-align: left;
+	        background-color:#005792;
+	        padding: 1 0 1 0;
+	        color: #FFFFFF;
+          margin-top: 1rem;
+          margin-right: 80%;
+    }
+        .slideshow {
+            
+            position:relative;
+            width:95%;
+            height:510px;
+            padding:0px;
+            margin:3px;
+           
+        }
+        .slideshow img {
+            width:103%;
+            height:482px;
+            margin:12px;
+            opacity: 0;
+            transition: opacity 1s;
+            position: absolute;
+            padding:1px;
+            object-fit:fill;
+            
+        }
+        .slideshow img.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    
+        <a href="#" class="logo" style="font-family: montserrat">
+
+            <h4>Singing Event Booking System</h4>	<!--Name of our website-->	
+        </a>
+
+        
+            <!--Menu of Navigation bar-->
+        <ul class="menu">
+
+            <li> <a href="{% url 'Home' %}">Home</a></li>
+            <li> <a href="{% url 'Product' %}">Events</a></li>
+            <li> <a href="{% url 'add_event' %}">ADD EVENTS</a></li>
+            <li> <a href="{% url 'My_Booking' %}">My_Booking</a></li>
+           
+        </ul>
+    </nav>
+  
+
+      <section id="product">
+         <hr style="border-color: #005792;">  <!--Inline CSS-->
+      </section>
+
+    
+   
+    
+  </div>
+  </div>
+  <div class="INTRO">
+   <!--Paragraph of the product page-->
+    <p class="INTRO-NAME ">Elevate your events with the enchanting melodies of our talented singers, setting the stage for unforgettable memories and magical moments.</p>
+  </div>
+  
+
+<!-- HTML structure for slideshow -->
+<div class="slideshow">
+    <img src="{% static 'image\image2 event.jpg' %}" alt="image" class="active">
+    <img src="{% static 'image\image 1 event.png' %}" alt="Image">
+   
+</div>
+
+<!-- JavaScript for slideshow -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var slides = document.querySelectorAll('.slideshow img');
+        var currentSlide = 0;
+        slides[currentSlide].classList.add('active');
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, 5000); // Change slide every 3 seconds
+    });
+</script>
+
+  <h1 colour="yellow">Events</h1>
+
+
+    
+    
+   
+<div class="product-container">
+    {% for event in events %}
+    <div class="product">
+        <img src="{{ event.image.url }}" alt="{{ event.event_name }}">
+        <h3>{{ event.event_name }}</h3>
+        <p>{{ event.description }}</p>
+        <p>Date: {{ event.date }}</p>
+        <p>Time: {{ event.time }}</p>
+        <p>Venue: {{ event.venue }}</p>
+        <p>Price: {{ event.price }}</p>
+        <!-- Add a form for booking with a "Book Now" button -->
+        <form action="{% url 'book_now_submit' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="event_id" value="{{ event.id }}">
+            <input type="submit" value="Book Now">
+        </form>
+    </div>
+    {% endfor %}
+</div>
+
+    
+  </div>
+  </div>
+  
+
+ <!--Footer of the page-->
+ <footer id="footer">
+  <div class="footer">
+  <p class="Copyright">© Copyright 2023 Singing Event Booking System</p>
+ </div>
+
+
+</footer>
+
+</div>
+</body>
+</html>

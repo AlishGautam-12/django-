@@ -1,0 +1,171 @@
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#main{
+	width:100%;
+	height:100vh;
+	position: relative;
+}
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 5px 10px 30px rgba(0,0,0,0.02);
+	left: 0;
+	padding-top: 10px;
+	width:100%;
+	z-index: 1;
+	background-color: #FFFFFF;
+}
+.logo{      /*CSS for logo*/
+	height: 46px;
+	margin-right:17%;
+}
+nav ul{
+	display: flex;
+}
+nav ul li a{
+	height:40px;
+    font-family: "montserrat",sans-serif;
+	line-height: 43px;
+	margin: 3px;
+	padding: 0px 22px;
+	display: flex;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	color:#585b5b;
+	letter-spacing: 1px;
+}
+
+nav ul li a:hover{          /*This css affects navbar if anything triggers it*/
+	background-color: #005792;
+	color:#FFFFFF;
+	box-shadow: 5px 10px 30px rgba(64,198,196,0.3);
+	transition: all ease 0.2s;
+}
+.nav-search{
+	display: flex;
+	height: 34px;
+	width: 100%;
+	justify-content:space-around;
+	margin-left: -162px;
+	margin-bottom: -62px;
+}
+
+/*CSS for searching section*/
+.search{
+    overflow:visible;
+    display: flex;
+    padding: 2px;
+    margin-left: -84px;
+    position:relative;
+    background-color:white;
+    border-color: #005792;
+    
+  }
+  .search button{
+    align-items:end;
+    color:rgb(255, 255, 255);
+    width: 61px;
+    height: 36px;
+    border-radius: 11px;
+  }
+  .search a {
+    float: left;
+    display:flex;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 18px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .search a:hover {
+    background-color: #dddddd;
+    color: rgb(247, 244, 244);
+  }
+  .search input[type=text] {
+    float: right;
+    height: 13px;
+    width: 350px;
+    padding: 6px;
+    border: none;
+    margin-top: -106px;
+    margin-left: 981px;
+    font-size: 13px;
+    font-family: Montserrat;
+    border-radius: -4px;
+    background-color: rgb(223 229 241);
+  }
+  .search a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  .search i{
+    position: absolute;
+    left: 993px;
+    bottom: 87px;
+  }
+ 
+  /*CSS for buttons of home page*/
+  .button{
+        text-align: end;
+        margin: 10px;
+        height: 1px;
+        width: 3px;
+        padding:30px;
+        color: #c8e719;
+  
+    }
+
+    /*CSS for hoverng of the buttons*/
+    .button:hover{
+        background-color: #d4e95d;
+        color: #56c8f5;
+    }
+  
+    /*CSS for paragraphs*/
+    .INTRO {
+      text-align: center;
+      height: 300PX;
+      width: 100%;
+      padding:0PX;
+      background-color:#005792;
+      margin:5px;
+      margin-bottom: 10PX;
+      margin-top: 45PX;
+    }
+    
+    .INTRO-NAME {
+      font-size: 30px;
+      font-family: "montserrat",sans-serif;
+      color: #eeecec;
+      margin-right: 10px;
+      text-decoration-color: #c8e719;
+      padding: 105px;
+    }
+    
+    
+    .INTRO-logo {
+      width: 17%;
+      height: 100%;
+    }
+  
+    /* Event_list.css */
+
+/* Style for Update button */
+.btn-update {
+  background-color: #28a745; /* Green background color */
+  color: #fff; /* White text color */
+  border: none; /* No border */
+}
+
+/* Style for Delete button */
+.btn-delete {
+  background-color: #dc3545; /* Red background color */
+  color: #fff; /* White text color */
+  border: none; /* No border */
+}

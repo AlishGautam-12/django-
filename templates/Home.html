@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to the main CSS stylesheet which is external CSS -->
+    <link rel="stylesheet" href="css/Home.css">
+   
+    
+    <!--Including the awesome font library-->
+    <script src="https://kit.fontawesome.com/bc715aa43c.js" crossorigin="anonymous"></script>
+
+    <!--Title of the page-->
+    <title>Home</title>
+    <style>
+       /*Internal CSS for demonstration purposes*/
+        .heading{
+	        text-align: left;
+	        background-color:#005792;
+	        padding: 1 0 1 0;
+	        color: #FFFFFF;
+          margin-top: 1rem;
+          margin-right: 80%;
+    }
+        .slideshow {
+            
+            position:relative;
+            width:95%;
+            height:510px;
+            padding:0px;
+            margin:3px;
+           
+        }
+        .slideshow img {
+            width:103%;
+            height:482px;
+            margin:12px;
+            opacity: 0;
+            transition: opacity 1s;
+            position: absolute;
+            padding:1px;
+            object-fit:fill;
+            
+        }
+        .slideshow img.active {
+            opacity: 1;
+        }
+    </style>
+
+    <!--Link to the additional CSS stylesheet specific to the home page-->
+    
+   
+  <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+   
+</head>
+<body>
+   
+           <nav>
+            <header>
+                <div class="nav-search">
+                    <img src="{% static '' %}" alt=""> <!--Logo of our website-->
+                </div>
+           </header> 
+            <a href="#" class="logo" style="font-family: montserrat">
+                <h4>Singing Event Booking System</h4>	<!--Name of our website-->	
+            </a>
+
+            <!--Menu of Navigation bar-->
+            <ul class="menu">
+                
+                <li> <a href="{% url 'Home' %}">Home</a></li>
+                
+                <li> <a href="{% url 'Product' %}">Events</a></li>
+                <li> <a href="{% url 'add_event' %}">ADD EVENTS</a></li>
+                <li> <a href="{% url 'My_Booking' %}">My_Booking</a></li>
+            </ul>
+        </nav>
+
+        <div class="slideshow">
+            <img src="{% static 'image\image 1 event.png' %}" alt="image" class="active">
+            <img src="{% static 'image\image2 event.jpg' %}" alt="Image">
+            
+        </div>
+        
+        <!-- JavaScript for slideshow -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var slides = document.querySelectorAll('.slideshow img');
+                var currentSlide = 0;
+                slides[currentSlide].classList.add('active');
+        
+                function nextSlide() {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }
+        
+                setInterval(nextSlide, 5000); // Change slide every 3 seconds
+            });
+        </script>
+
+</body>
+</html>

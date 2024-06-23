@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event List</title>
+    <!-- Bootstrap CSS link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/Event_list.css' %}">
+    
+</head>
+<body>
+    <nav>
+        <header>
+           
+            <ul class="menu">
+                <li><a href="{% url 'Home' %}">Home</a></li>
+                <li> <a href="{% url 'Product' %}">Events</a></li>
+                <li><a href="{% url 'add_event' %}">ADD EVENT</a></li>
+               
+                <!-- Other menu items if needed -->
+            </ul>
+        </header>
+    </nav>
+    <section id="product">
+        <hr style="border-color: #005792;">  <!--Inline CSS-->
+     </section>
+
+    <div class="container">
+        <h1>Event List</h1>
+        <table class="table table-bordered custom-table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Event Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Venue</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for event in events %}
+                <tr>
+                    <td>{{ event.event_name }}</td>
+                    <td>{{ event.description }}</td>
+                    <td>{{ event.date }}</td>
+                    <td>{{ event.time }}</td>
+                    <td>{{ event.venue }}</td>
+                    <td>{{ event.price }}</td>
+                    <td>
+                        <a href="{% url 'update_event' event.pk %}" class="btn btn-update">Update</a>
+                        <a href="{% url 'delete_event' event.pk %}" class="btn btn-delete">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS scripts (optional, if needed) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

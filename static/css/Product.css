@@ -1,0 +1,312 @@
+/* Import the 'Montserrat' font with a weight of 500 from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Import the 'Poppins' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{           /*This css affects whole body of the page*/
+	margin:0px;
+	padding: 0px;
+  height: 0px;
+  overflow-x: hidden;
+	font-family: "montserrat" sans-serif;
+	
+}
+
+
+/*CSS for Navigation bar*/
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#main{
+	width:100%;
+	height:100vh;
+	position: relative;
+}
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 5px 10px 30px rgba(0,0,0,0.02);
+	left: 0;
+	padding-top: 10px;
+	width:100%;
+	z-index: 1;
+	background-color: #FFFFFF;
+}
+.logo{      /*CSS for logo*/
+	height: 46px;
+	margin-right:17%;
+}
+nav ul{
+	display: flex;
+}
+nav ul li a{
+	height:40px;
+    font-family: "montserrat",sans-serif;
+	line-height: 43px;
+	margin: 3px;
+	padding: 0px 22px;
+	display: flex;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	color:#585b5b;
+	letter-spacing: 1px;
+}
+
+nav ul li a:hover{          /*This css affects navbar if anything triggers it*/
+	background-color: #005792;
+	color:#FFFFFF;
+	box-shadow: 5px 10px 30px rgba(64,198,196,0.3);
+	transition: all ease 0.2s;
+}
+.nav-search{
+	display: flex;
+	height: 50px;
+	width: 25%;
+	justify-content:space-around;
+	margin-left: 81px;
+	margin-bottom: -11px;
+}
+
+/*CSS for searching section*/
+.search{
+    overflow:visible;
+    display: flex;
+    padding: 2px;
+    margin-left: -84px;
+    position:relative;
+    background-color:white;
+    border-color: #005792;
+    
+  }
+  .search button{
+    align-items:end;
+    color:rgb(255, 255, 255);
+    width: 61px;
+    height: 36px;
+    border-radius: 11px;
+  }
+  .search a {
+    float: left;
+    display:flex;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 18px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .search a:hover {
+    background-color: #dddddd;
+    color: rgb(247, 244, 244);
+  }
+  .search input[type=text] {
+    float: right;
+    height: 13px;
+    width: 350px;
+    padding: 6px;
+    border: none;
+    margin-top: -106px;
+    margin-left: 981px;
+    font-size: 13px;
+    font-family: Montserrat;
+    border-radius: -4px;
+    background-color: rgb(223 229 241);
+  }
+  .search a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  .search i{
+    position: absolute;
+    left: 993px;
+    bottom: 87px;
+  }
+ 
+  /*CSS for buttons of home page*/
+  .button{
+        text-align: end;
+        margin: 10px;
+        height: 1px;
+        width: 3px;
+        padding:30px;
+        color: #c8e719;
+  
+    }
+
+    /*CSS for hoverng of the buttons*/
+    .button:hover{
+        background-color: #d4e95d;
+        color: #56c8f5;
+    }
+  
+    /*CSS for paragraphs*/
+    .INTRO {
+      text-align: center;
+      height: 300PX;
+      width: 100%;
+      padding:0PX;
+      background-color:#005792;
+      margin:5px;
+      margin-bottom: 10PX;
+      margin-top: 45PX;
+    }
+    
+    .INTRO-NAME {
+      font-size: 30px;
+      font-family: "montserrat",sans-serif;
+      color: #eeecec;
+      margin-right: 10px;
+      text-decoration-color: #c8e719;
+      padding: 105px;
+    }
+    
+    
+    .INTRO-logo {
+      width: 17%;
+      height: 100%;
+    }
+  
+    
+  /*CSS for heading*/
+   h1{
+    text-align: center;
+    background-color: #005792;
+    padding:10px;
+    width: 100%;
+    color: white;
+   }
+  
+   /*CSS for all products*/
+  .product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    
+  }
+  
+  .product {
+    width: 300px;
+    margin: 10px;
+    padding: 5px;
+    background-color: #faf6f6;
+    border: 1px solid #d1d0d0;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .product img {
+    width: 48%;
+    height: 140px;
+    border-radius: 2px;
+  }
+  
+  .product h2 {
+    margin-top: 9px;
+    margin-bottom: 3px;
+    padding:20px;
+    width:30px ;
+  background-color: #c8e719;
+    
+  }
+  
+  .product p {
+    margin-top: 5px;
+  }
+  
+  .product button {
+    margin-top: 10px;
+    background-color: #005792;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .product button:hover {
+    background-color: #1b4565;
+  }
+  
+  .product.product:hover{
+    outline: #080f14;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.8);
+    outline-offset: 20;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  .tex{
+    text-align: center;
+    padding: 100;
+    color: #007bff;
+    margin-top: 12;
+  }
+  
+ 
+  
+  .product-header {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .product-name {
+    font-size: 24px;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .product-logo {
+    width: 50px;
+    height: 50px;
+    margin: 100px;
+  }
+
+
+  /*CSS for the link button that takes to the blog section*/ 
+  .linkbutton{
+    
+    width:160px;
+    padding:15px  ;
+    text-align: center;
+    border-radius: 25px;	
+    font-weight: bold;
+    background-color: #005792;
+    font-family: "montserrat",sans-serif;
+    border:none;
+    cursor: pointer;
+    color: white;
+    margin-top: 9%;
+    justify-content: center;
+    margin-left: 2%;
+    
+    }
+    .linkbutton:hover{
+      background-color: #67abdf;
+      transition: all ease 0.2s;
+    }
+
+    /*CSS for footer*/
+  .footer{
+    background-color: #34656d;
+    text-align: center;
+    padding:2% 3%;
+    margin-top: 5rem;
+    color: #FFFFFF;
+  }
+  
+.footer-icon{
+    margin:5px 10px;
+    font-size: larger;
+    color: #FFFFFF;
+}
+    
+.footer-icon:hover{
+   zoom: 20fr;
+   color: aquamarine;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Event</title>
+    <link rel="stylesheet" href="{% static 'css/delete_event.css' %}">
+</head>
+<body>
+    
+    <h1>Delete Event</h1>
+    <p>Are you sure you want to delete "{{ event.event_name }}"?</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Confirm Delete</button>
+        <a href="{% url 'Event_list' %}">Cancel</a>
+    </form>
+</body>
+</html>
